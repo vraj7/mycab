@@ -1,0 +1,49 @@
+<h1 class="mt-4"></h1>
+<p class="lead mb-3">Add driver</p>
+<p class="lead mb-3">
+    <% if(typeof errors !== 'undefined') { %>
+        <p><%= errors[0].msg %></p>
+  <% } %>
+  </p>
+  <p class="lead mb-3">
+    <% if(typeof success_msg !== 'undefined') { %>
+        <p><%= success_msg %></p>
+ <% } %>
+</p>
+<div class="container">
+    <div class="row">
+        <div class='col-md-3'></div>
+        <div class="col-md-6">
+            <div class="login-box well">
+                <form action="/driver/create/" method="POST">
+                    <legend>Enter following</legend>
+                    <div class="form-group">
+                        <label>Driver name</label>
+                        <input value='' id="name" name="name" placeholder="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Car model</label>
+                        <input value='' id="carmodel" name="carmodel" placeholder="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Car number</label>
+                        <input value='' id="carnumber" name="carnumber" placeholder="" type="text"
+                            class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label> Longitude</label>
+                        <input value='' id="carlong" name="carlong" placeholder="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label> Latitude</label>
+                        <input value='' id="carlat" name="carlat" placeholder="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class='col-md-3'></div>
+    </div>
+</div>

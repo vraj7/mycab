@@ -1,0 +1,24 @@
+<h1>List of all bookings</h1>
+<ul>
+    <% data.forEach(function(bookings) { %>
+        <li> DATE:<%= bookings.date %>
+        </li>
+        <li> CARMODEL:<%= bookings.carmodel %>
+        </li>
+        <li> CARNUMBER:<%= bookings.carnumber %>
+        </li>
+        <li> DESTINATION LONGITUDE:<%= bookings.bookingloc[0]["destlong"] %>
+        </li>
+        <li> DESTINATION LATITUDE:<%= bookings.bookingloc[0]["destlat"] %>
+        </li>
+        <br>
+        <% }); %>
+</ul>
+
+<p class="lead mb-3">
+    <% if(typeof nodata !=='undefined' ) { %>
+        <p>
+            <%= nodata %>
+        </p>
+        <% } %>
+</p>

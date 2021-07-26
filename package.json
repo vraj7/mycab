@@ -1,0 +1,28 @@
+{
+  "name": "mycabs",
+  "version": "1.0.0",
+  "description": "sample web app to book cabs near by ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "vishnu raj",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "ejs": "^2.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-rate-limit": "^5.3.0",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.13.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "mongodb": "^4.0.1"
+  }
+}

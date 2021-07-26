@@ -1,0 +1,42 @@
+<h1 class="mt-4"></h1>
+<p class="lead mb-3">
+    <% if(typeof user !== 'undefined') { %>
+        <p>Welcome <%= user.name %></p>
+ <% } %>
+</p>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<a href="/driver" class="btn btn-secondary">create driver</a>
+<a href="/booking/list" class="btn btn-secondary">All bookings </a>
+
+<div class="container">
+    <div class="row">
+        <div class='col-md-3'></div>
+        <div class="col-md-6">
+            <div class="login-box well">
+                <form action="/booking/cab" method="POST">
+                    <legend>Enter following</legend>
+                    <div class="form-group">
+                        <label>Your Latitude</label>
+                        <input value='' id="curlat" name="curlat" placeholder="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Your longitude</label>
+                        <input value='' id="curlong" name="curlong" placeholder="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Destination Latitude</label>
+                        <input value='' id="destlat" name="destlat" placeholder="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Destination Longitude</label>
+                        <input value='' id="destlong" name="destlong" placeholder="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class='col-md-3'></div>
+    </div>
+</div>

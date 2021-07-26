@@ -1,0 +1,35 @@
+<a href="/homepage" class="btn btn-secondary">Back to homepage</a>
+
+<p class="lead mb-3">
+    <% if(typeof data !== 'undefined') { %>
+    <p><%= data.name %></p>
+    <p><%= data.carmodel %></p>
+    <p><%= data.carnumber %></p>
+ <% } %>
+</p>
+
+<p class="lead mb-3">
+    <% if(typeof booked_msg !== 'undefined') { %>
+        <p><%= booked_msg %></p>
+ <% } %>
+</p>
+
+<p class="lead mb-3">
+    <% if(typeof nodata !== 'undefined') { %>
+        <p><%= nodata %></p>
+ <% } %>
+</p>
+
+<% if(typeof data !== 'undefined') { %>
+    <form action="/booking/bookcab" method="POST">
+    <input value="<%= data._id %>" id="driverId" name = "driverId" placeholder="" type="hidden"  class="form-control" />
+    <input value="<%= data.name %>" id="drivername" name = "drivername" placeholder="" type="hidden"  class="form-control" />
+    <input value="<%= data.carmodel %>" id="carmodel" name = "carmodel" placeholder="" type="hidden"  class="form-control" />
+    <input value="<%= data.carnumber %>" id="carnumber" name = "carnumber" placeholder="" type="hidden"  class="form-control" />
+    <input value="<%= loc.curlat %>" id="curlat" name = "curlat" placeholder="" type="hidden"  class="form-control" />
+    <input value="<%= loc.curlong %>" id="curlong" name = "curlong" placeholder="" type="hidden"  class="form-control" />
+    <input value="<%= loc.destlat %>" id="destlat" name = "destlat" placeholder="" type="hidden"  class="form-control" />
+    <input value="<%= loc.destlong %>" id="destlong" name = "destlong" placeholder="" type="hidden"  class="form-control" />
+    <input type="submit" name="bookcab" value="Book this cab" />
+</form>
+<% } %>
